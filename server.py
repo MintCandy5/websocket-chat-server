@@ -6,9 +6,7 @@ clients = []
 class SimpleChat(WebSocket):
 
     def handleMessage(self):
-       for client in clients:
-          if client != self:
-             client.sendMessage(self.address[0] + ' - ' + self.data)
+      print ''.join(' {:02x}'.format(x) for x in self.data)
 
     def handleConnected(self):
        print self.address, 'connected'
