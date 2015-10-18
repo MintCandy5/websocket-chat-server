@@ -1,3 +1,7 @@
+import signal, sys, ssl
+from SimpleWebSocketServer import WebSocket, SimpleWebSocketServer, SimpleSSLWebSocketServer
+from optparse import OptionParser
+
 clients = []
 class SimpleChat(WebSocket):
 
