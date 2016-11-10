@@ -6,7 +6,7 @@ clients = []
 class SimpleChat(WebSocket):
 
     def handleMessage(self):
-        words = self.data.split('\xfe')
+        words = self.data.split("\r\n")
         print("\nCount={0}".format(len(words)))
         for w in words:
             print ''.join(' {:02x}'.format(x) for x in w)
